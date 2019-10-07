@@ -13,10 +13,10 @@ public class SpringMain {
 		
 		
 		Greeting greeting=ctx.getBean("festival", Greeting.class);
-		System.out.println(greeting.greet());
+		//System.out.println(greeting.greet());
 		
-		Greeting greeting1=ctx.getBean("anniversary", Greeting.class);
-		System.out.println(greeting1.greet());
+		Greeting greeting1=ctx.getBean("festival", Greeting.class);
+		//System.out.println(greeting1.greet());
 		
 	}
 
