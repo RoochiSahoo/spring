@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+	<bean id="magic" class="com.zensar.spring.magicboxes.MagicBoxImpl">
+		<replaced-method name="getcontents"
+			replacer="magicReplacer"></replaced-method>
+
+	</bean>
+	<bean id="itsmagic" class="com.zensar.spring.performers.Magician">
+
+		<property name="magicWords" value="aabra ka daabra"></property>
+		<property name="magicBox" ref="magic"></property>
+	</bean>
+	<bean id="magicReplacer"
+		class="com.zensar.spring.replacers.MagicBoxReplacer"></bean>
+
+
+
+
+
+
+
+
+</beans>
